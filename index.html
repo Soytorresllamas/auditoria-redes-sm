@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Auditoría de Redes · SM México</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,800;1,6..72,500;1,6..72,600&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@8.0.7/babel.min.js"></script>
 <style>
 :root{
   /* cool, structured product neutrals — lets SM red read as the brand accent */
@@ -50,7 +51,20 @@ h1 em{font-style:italic;font-weight:500;color:var(--red)}
 .hmeta b{color:var(--ink-2);font-weight:600}
 .hmeta .live{color:var(--red);font-weight:700}
 .hmeta .upd{color:var(--green);font-weight:700;cursor:help}
-@media(max-width:560px){.mh-top{align-items:flex-start}.hmeta{text-align:left}}
+@media(max-width:560px){.mh-top{align-items:flex-start}.hmeta{text-align:left;flex-shrink:1;min-width:0;overflow-wrap:anywhere}}
+.exec{margin-bottom:36px}
+.exec-list{list-style:none;margin-top:14px;display:grid;gap:10px}
+.exec-list li{display:flex;gap:12px;align-items:baseline;font-size:13.5px;line-height:1.55;color:var(--ink-2)}
+.exec-list b{color:var(--ink)}
+.tag{flex-shrink:0;font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:6px;min-width:84px;text-align:center}
+.tag.f{background:var(--panel);color:var(--ink-2);border:1px solid var(--line-2)}
+.tag.i{background:#F7EED7;color:#8A6510}
+.cad{margin-top:20px;overflow-x:auto}
+.cad table{font-size:13px}
+.cad th{text-align:left;font-size:11.5px;color:var(--muted);font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line)}
+.cad td{padding:9px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.cad .num{text-align:right}
+@media(max-width:560px){.exec-list li{flex-direction:column;gap:4px}.tag{min-width:0}.cad th,.cad td{padding:8px 5px}}
 
 /* ---------- sticky filter bar ---------- */
 .filterwrap{position:sticky;top:0;z-index:var(--z-sticky);background:var(--bg);
@@ -115,7 +129,8 @@ h1 em{font-style:italic;font-weight:500;color:var(--red)}
 .dv .v{width:54px;text-align:right;font-weight:700;flex-shrink:0;font-variant-numeric:tabular-nums}
 
 /* ---------- table ---------- */
-.tablecard{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:34px}
+.tablecard{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow-x:auto;margin-bottom:34px;-webkit-overflow-scrolling:touch}
+.tablecard table{min-width:880px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 thead th{background:var(--ink);color:#fff;text-align:left;padding:13px 15px;font-size:12px;
   font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;transition:background .15s}
@@ -383,6 +398,10 @@ function App(){
   const totReach=filtered.reduce((s,d)=>s+d.reach,0);
   const ratios=filtered.filter(d=>d.followers).map(d=>d.reach/d.followers);
   const avgRatio=ratios.length?ratios.reduce((a,b)=>a+b,0)/ratios.length:0;
+  const topAcc=filtered.filter(d=>d.followers).sort((a,b)=>b.followers-a.followers)[0];
+  const topShare=topAcc&&totFol?topAcc.followers/totFol:0;
+  const allGrowth=DATA.reduce((s,d)=>s+(d.growth||0),0);
+  const funGrowth=DATA.filter(d=>d.line==='Fundación SM').reduce((s,d)=>s+(d.growth||0),0);
 
   const agg=useMemo(()=>{
     const key=groupBy==='line'?'line':'net';
@@ -404,6 +423,17 @@ function App(){
   // frequency matrix (posts/mes) — redes con conteo medido
   const FREQ_NETS=['Facebook','Instagram','LinkedIn','YouTube','TikTok'];
   const freqLines=LINES.filter(l=>lines.length===0||lines.includes(l));
+  // cadencia: piezas/mes FB+IG+LinkedIn, ene–jul (7 meses) vs ago–21 oct (82 días)
+  const ALLK=['fb','igFeed','igReel','li'];
+  const cadKeys=ALLK.filter(k=>nets.length===0||(k==='fb'?nets.includes('Facebook'):k==='li'?nets.includes('LinkedIn'):nets.includes('Instagram')));
+  const cadOf=(ls,ks)=>ls.map(l=>{const t=i=>ks.reduce((s,k)=>s+MONTHLY[l][k][i],0);
+    const h1=[0,1,2,3,4,5,6].reduce((s,i)=>s+t(i),0)/7;const h2=(t(7)+t(8)+t(9))/(82/30.4375);
+    return {l,h1,h2,d:h1?h2/h1-1:0};});
+  const cad=cadOf(LINES,ALLK);                 // resumen ejecutivo: siempre 5 líneas, sin filtros
+  const cadF=cadKeys.length?cadOf(freqLines,cadKeys):[];  // KPI: respeta filtros
+  const cadH1=cadF.reduce((s,c)=>s+c.h1,0), cadH2=cadF.reduce((s,c)=>s+c.h2,0);
+  const cadD=cadH1?cadH2/cadH1-1:0;
+  const fmtPct=x=>(x>0?'+':x<0?'−':'')+Math.abs(Math.round(x*100))+'%';
   const freqNets=FREQ_NETS.filter(n=>nets.length===0||nets.includes(n));
   const freqCell=(l,n)=>{const d=filtered.find(x=>x.line===l&&x.net===n);return d&&d.posts!=null?perMonth(d.posts):null;};
   const freqMax=Math.max(...freqLines.flatMap(l=>freqNets.map(n=>freqCell(l,n)||0)),0.1);
@@ -437,6 +467,8 @@ function App(){
     return r;
   },[filtered,sort]);
   const setSortK=k=>setSort(s=>s.k===k?{k,d:-s.d}:{k,d:-1});
+  const sp=k=>({tabIndex:0,onClick:()=>setSortK(k),onKeyDown:e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setSortK(k);}},
+    'aria-sort':sort.k===k?(sort.d<0?'descending':'ascending'):'none'});
   const arrow=k=>sort.k===k?<span className="ar">{sort.d<0?'▼':'▲'}</span>:null;
   const active=lines.length+nets.length>0;
 
@@ -478,11 +510,31 @@ function App(){
     </div>
 
     <div className="statbar">
-      <div className="stat"><div className="l">Seguidores totales</div><div className="n">{fmt(totFol)}</div><div className="s">en la selección · sin YouTube</div></div>
+      <div className="stat"><div className="l">Seguidores totales</div><div className="n">{topAcc?fmt(totFol):'n/d'}</div><div className="s">sin YouTube · {topAcc?Math.round(topShare*100)+'% en '+SHORT[topAcc.line]+' · '+topAcc.net:''}</div></div>
       <div className="stat"><div className="l">Crecimiento neto</div><div className={'n '+(totGrowth>=0?'pos':'negc')}>{fmtSign(totGrowth)}</div><div className="s">5 redes · ventanas por red en la nota</div></div>
-      <div className="stat"><div className="l">Cuentas</div><div className="n">{filtered.length}</div><div className="s">orgánicas activas</div></div>
+      <div className="stat"><div className="l">Cadencia reciente</div><div className={'n '+(cadD>=0?'pos':'negc')}>{cadH1?fmtPct(cadD):'n/d'}</div><div className="s">piezas/mes ago–oct vs ene–jul · FB·IG·LinkedIn</div></div>
       <div className="stat"><div className="l">Alcance / Impresiones</div><div className="n">{fmt(totReach)}</div><div className="s">acumulado mensual, sin deduplicar</div></div>
       <div className="stat"><div className="l">Ratio alcance ÷ segs.</div><div className="n">{avgRatio.toFixed(1)}×</div><div className="s">eficiencia media</div></div>
+    </div>
+
+    <div className="panel exec">
+      <div className="sec-h">Lo que importa</div>
+      <div className="cap">Hallazgos que cambian decisiones (sobre las 5 líneas, sin filtros). <b>Hecho</b> = dato del API · <b>Inferencia</b> = interpretación pendiente de verificar.</div>
+      <ol className="exec-list">
+        <li><span className="tag f">Hecho</span><span><b>La publicación cayó desde agosto en 4 de 5 líneas.</b> Solo Fundación mantuvo su ritmo; la tabla de abajo compara piezas/mes antes y después. La causa queda fuera de los datos y debe confirmarse con cada línea.</span></li>
+        <li><span className="tag f">Hecho</span><span><b>Fundación concentra el crecimiento:</b> {fmtSign(funGrowth)} de {fmtSign(allGrowth)} seguidores netos ({allGrowth?Math.round(funGrowth/allGrowth*100):0}%), impulsado por convocatorias de premios que piden una acción.</span></li>
+        <li><span className="tag f">Hecho</span><span><b>Las tres páginas grandes de Facebook pierden seguidores</b> (Grupo SM, SM LIJ, Dayton), aunque Facebook concentra la mayor parte de la audiencia.</span></li>
+        <li><span className="tag f">Hecho</span><span><b>Social casi no lleva tráfico a la web:</b> 1.8% de las sesiones en Grupo SM y 1.2% en Dayton, con 0 conversiones configuradas en GA4.</span></li>
+        <li><span className="tag i">Inferencia</span><span><b>El GA4 de Fundación está mal medido</b> (368 sesiones en el año, 0 de búsqueda orgánica). Ninguna conclusión sobre su conversión web es válida hasta revisar la etiqueta.</span></li>
+      </ol>
+      {cad.length>0&&<div className="cad"><table>
+        <thead><tr><th>Línea</th><th className="num">Ene–jul</th><th className="num">Ago–21 oct</th><th className="num">Cambio</th></tr></thead>
+        <tbody>{cad.map(c=><tr key={c.l}>
+          <td><span className="pip" style={{background:LINE_COLOR[c.l],display:'inline-block',width:8,height:8,borderRadius:2,marginRight:8}}/>{c.l}</td>
+          <td className="num">{c.h1.toFixed(1)}</td><td className="num">{c.h2.toFixed(1)}</td>
+          <td className="num"><span className={'pill '+(c.d<=-0.25?'down':c.d>=0.1?'up':'flat')}>{fmtPct(c.d)}</span></td>
+        </tr>)}</tbody>
+      </table><div className="cap" style={{marginTop:8}}>Piezas/mes en Facebook (posts + reels), Instagram (feed + reels) y LinkedIn. El tramo ago–oct se normaliza por días (82) porque octubre es parcial.</div></div>}
     </div>
 
     <div className="grid2">
@@ -507,7 +559,7 @@ function App(){
 
       <div className="panel">
         <div className="sec-h">Crecimiento neto</div>
-        <div className="cap">Altas menos bajas dentro del periodo, por cuenta.</div>
+        <div className="cap">Altas menos bajas dentro del periodo, por cuenta. {growthRows.filter(d=>d.growth<0).length>0?growthRows.filter(d=>d.growth<0).length+' cuentas caen (al final de la lista, desplaza).':''}</div>
         <div className="scrollbox">
         {growthRows.length===0?<div className="empty">Sin cuentas con crecimiento medible en la selección.</div>:
          growthRows.map(d=><div className="dv" key={d.line+d.net}>
@@ -524,10 +576,10 @@ function App(){
 
     <div className="panel" style={{marginBottom:36}}>
       <div className="sec-h">Eficiencia de alcance</div>
-      <div className="cap">Alcance acumulado ÷ seguidores, top 8 (YouTube excluido: sin total de suscriptores). Arriba de 5× el contenido viaja más allá de la base de seguidores.</div>
+      <div className="cap">Alcance acumulado ÷ seguidores, top 8 (YouTube excluido: sin total de suscriptores). Arriba de 5× el contenido viaja más allá de la base de seguidores. LinkedIn usa impresiones (cuentan repeticiones), así que su ratio sale inflado frente a FB e IG.</div>
       <div style={{marginTop:16}}>
       {effRows.map(d=><div className="bar" key={d.line+d.net}>
-        <div className="lab"><span className="pip" style={{background:NET_COLOR[d.net]}}/>{d.handle.length>24?d.handle.slice(0,24)+'…':d.handle}</div>
+        <div className="lab" title={d.handle}><span className="pip" style={{background:NET_COLOR[d.net]}}/>{SHORT[d.line]} · {d.net}</div>
         <div className="track"><div className="fill" style={{width:(d.ratio/effMax*100)+'%',background:LINE_COLOR[d.line]}}/></div>
         <div className="val">{d.ratio.toFixed(1)}×</div>
       </div>)}
@@ -642,15 +694,15 @@ function App(){
     <div className="tablecard">
       <table>
         <thead><tr>
-          <th tabIndex="0" onClick={()=>setSortK('line')}>Línea{arrow('line')}</th>
-          <th tabIndex="0" onClick={()=>setSortK('net')}>Red{arrow('net')}</th>
-          <th tabIndex="0" onClick={()=>setSortK('handle')}>Handle{arrow('handle')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('followers')}>Seguidores{arrow('followers')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('growth')}>Crec. neto{arrow('growth')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('reach')}>Alcance/Impr.{arrow('reach')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('ratio')}>Ratio{arrow('ratio')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('posts')}>Cont./mes{arrow('posts')}</th>
-          <th tabIndex="0" className="num" onClick={()=>setSortK('er')}>Eng-rate{arrow('er')}</th>
+          <th {...sp('line')}>Línea{arrow('line')}</th>
+          <th {...sp('net')}>Red{arrow('net')}</th>
+          <th {...sp('handle')}>Handle{arrow('handle')}</th>
+          <th className="num" {...sp('followers')}>Seguidores{arrow('followers')}</th>
+          <th className="num" {...sp('growth')} title="Altas menos bajas en el periodo (IG desde abril en 4 cuentas; TikTok ago–oct)">Crec. neto{arrow('growth')}</th>
+          <th className="num" {...sp('reach')} title="Alcance acumulado (suma mensual). LinkedIn: impresiones; YouTube y TikTok: vistas">Alcance/Impr.{arrow('reach')}</th>
+          <th className="num" {...sp('ratio')} title="Alcance acumulado ÷ seguidores">Ratio{arrow('ratio')}</th>
+          <th className="num" {...sp('posts')} title="Piezas publicadas (posts + reels) ÷ 9.66 meses">Cont./mes{arrow('posts')}</th>
+          <th className="num" {...sp('er')} title="Interacciones ÷ vistas de contenido">Eng-rate{arrow('er')}</th>
           <th>Señal</th>
         </tr></thead>
         <tbody>

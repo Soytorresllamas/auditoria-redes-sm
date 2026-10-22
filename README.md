@@ -6,6 +6,7 @@ Ventana de análisis: **Este año 2026** (1-ene a 21-oct). Última actualizació
 
 ## Qué incluye
 
+- **Lo que importa:** resumen ejecutivo con hallazgos etiquetados (hecho / inferencia) y cadencia de publicación ene–jul vs ago–oct.
 - **KPIs y filtros** por línea de negocio y por red social.
 - **Audiencia y crecimiento neto** por cuenta.
 - **Eficiencia de alcance** (alcance ÷ seguidores).
@@ -17,7 +18,7 @@ Ventana de análisis: **Este año 2026** (1-ene a 21-oct). Última actualizació
 
 ## Cómo verlo
 
-El tablero es una sola página `index.html` (React, sin dependencias de servidor). **Está abierto, sin contraseña:** el cifrado se retiró en el commit `0bf3a2c`. Cualquier persona con el enlace de GitHub Pages puede verlo.
+El tablero es una sola página `index.html` (React, sin dependencias de servidor). **Está abierto, sin contraseña:** el cifrado se retiró en el commit `0bf3a2c`. Cualquier persona con el enlace de GitHub Pages puede verlo; la página pide a los buscadores no indexarla (`noindex`), lo cual reduce la exposición pero no la impide.
 
 > Para abrir localmente: descarga `index.html` y ábrelo en un navegador.
 

@@ -2,7 +2,7 @@
 
 Tablero interactivo de la auditoría de redes sociales de **Editorial SM México** y sus 5 líneas de negocio (Grupo SM, SM LIJ, Dayton/UDP, Escuela Católica, Fundación SM).
 
-Ventana de análisis: **Este año 2026** (1-ene a 29-jun). Fuente de datos: **AgencyAnalytics** (vía API).
+Ventana de análisis: **Este año 2026** (1-ene a 21-oct). Última actualización: 22-oct-2026. Fuente de datos: **AgencyAnalytics** (vía API).
 
 ## Qué incluye
 
@@ -17,10 +17,10 @@ Ventana de análisis: **Este año 2026** (1-ene a 29-jun). Fuente de datos: **Ag
 
 ## Cómo verlo
 
-El tablero es una sola página `index.html` (React, sin dependencias de servidor) y está **protegido con contraseña** (cifrado AES en el navegador). Ábrelo desde el enlace en vivo (GitHub Pages) e ingresa la contraseña que se comparte por separado.
+El tablero es una sola página `index.html` (React, sin dependencias de servidor). **Está abierto, sin contraseña:** el cifrado se retiró en el commit `0bf3a2c`. Cualquier persona con el enlace de GitHub Pages puede verlo.
 
 > Para abrir localmente: descarga `index.html` y ábrelo en un navegador.
 
 ---
 
-Material interno de SM México · Dirección de Mercadotecnia · jun-2026
+Material interno de SM México · Dirección de Mercadotecnia · oct-2026

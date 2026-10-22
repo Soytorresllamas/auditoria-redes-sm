@@ -257,98 +257,101 @@ const NETS=['Facebook','Instagram','YouTube','LinkedIn','TikTok'];
 const SM_LOGO="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNjAiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCAyNjAgNjQiIGZpbGw9Im5vbmUiPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8zNTg4XzEwMzcxKSI+PHBhdGggZD0iTTkxLjIxOTUgMTkuOTM5OUM5NS4xMjQxIDE5LjkzOTkgOTguNTY3MSAyMC45MTQ0IDEwMS4zODIgMjIuMjkyOVYyOC44MzlDOTkuMDI4NyAyNy4yMzI5IDk1LjAwODcgMjYuMDI0NCA5MS43MzU2IDI2LjAyNDRDODkuOTU2NSAyNi4wMjQ0IDg3Ljg4ODcgMjYuNTQzNyA4Ny44ODg3IDI4LjIwNzVDODcuODg4NyAzMi44MDEzIDEwMy40NDkgMzAuNTA2IDEwMy40NDkgNDAuNjEwNUMxMDMuNDQ5IDQ3LjA5ODkgOTcuNTM0OCA0OS4xMDg5IDkwLjkzNDIgNDkuMTA4OUM4Ni43NDExIDQ5LjEwODkgODIuNzgyIDQ4LjE4ODkgNzkuOTY3NCA0Ni41MjUxVjM5LjkyMTNDODIuOTUxOSA0MS44NzM2IDg3LjE0MTggNDIuODUxMyA5MC40NzU4IDQyLjg1MTNDOTMuNDAyNiA0Mi44NTEzIDk1LjI5NzIgNDIuMzM1MiA5NS4yOTcyIDQwLjc4MzZDOTUuMjk3MiAzNi4zNjI5IDc5LjczOTcgMzguMzE1MiA3OS43Mzk3IDI4LjQ0MTVDNzkuNzM5NyAyMi4wNjUzIDg1LjQyMzUgMTkuOTQzMSA5MS4yMjI3IDE5Ljk0MzFMOTEuMjE5NSAxOS45Mzk5WiIgZmlsbD0iIzFEMUQxQiI+PC9wYXRoPjxwYXRoIGQ9Ik0xMDYuMjUxIDQ4LjMwNDNWMjAuNzQ0NUgxMTMuMzEzVjIzLjk1OTlDMTE0Ljc1IDIyLjIzODQgMTE3LjkwNyAxOS45Mzk5IDEyMi4wOTcgMTkuOTM5OUMxMjYuMjg3IDE5LjkzOTkgMTI4LjkyOSAyMS42NjE0IDEzMC41MzggMjQuMDE0NEMxMzIuODMzIDIxLjc3MzYgMTM1LjkzMyAxOS45Mzk5IDEzOS43MjIgMTkuOTM5OUMxNDcuNDc0IDE5LjkzOTkgMTUwIDI1Ljk2NjcgMTUwIDMwLjg0OVY0OC4zMDExSDE0Mi4wNzlWMzEuMzYxOUMxNDIuMDc5IDI4LjQ5MjggMTQwLjI5OSAyNi44MjU4IDEzNy43NzMgMjYuODI1OEMxMzUuNjE2IDI2LjgyNTggMTMzLjY4NiAyOC4wNiAxMzIuMzY1IDI5LjUzMTVDMTMyLjM2MiAyOS41Mzc5IDEzMi4zNzggNDguMzAxMSAxMzIuMzc4IDQ4LjMwMTFIMTI0LjQ1M1YzMS4zNjE5QzEyNC40NTMgMjguNDkyOCAxMjIuNjc0IDI2LjgyNTggMTIwLjE0OCAyNi44MjU4QzExNy42MjIgMjYuODI1OCAxMTUuNTU0IDI4LjQzNTEgMTE0LjIzNCAzMC4xNTY2VjQ4LjMwMTFIMTA2LjI1NEwxMDYuMjUxIDQ4LjMwNDNaIiBmaWxsPSIjMUQxRDFCIj48L3BhdGg+PHBhdGggZD0iTTI0LjIwMDIgNTAuOTU4N1Y0LjQxMTI2QzI0LjIwMDIgMi4wMTMzNyAyNi4xNDI4IDAuMDY3NDc4NiAyOC41NDA3IDAuMDY3NDc4NkwyMC4xODAyIDAuMDU3ODYxM0MxNy43ODg3IDAuMDU3ODYxMyAxNS42MjQ4IDEuMDIyNzkgMTQuMDUwOCAyLjU4Mzk5TDIuNTQ1MzYgMTQuMDk1OEMwLjk3MTM0MSAxNS42NjY2IDAgMTcuODQwMSAwIDIwLjI0MTJMMC4wMDY0MTE0OSA2MC4xODE2QzAuMDA2NDExNDkgNjIuMTA4MyAxLjU2NzYxIDYzLjY2OTQgMy40OTEwNiA2My42Njk0SDkuNjk0MTdDMTAuODkzMSA2My42Njk0IDExLjk3OTkgNjMuMTgyMiAxMi43NjUzIDYyLjM5NjhMMjQuMTk3IDUwLjk2MTlMMjQuMjAwMiA1MC45NTg3WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzM1ODhfMTAzNzEpIj48L3BhdGg+PHBhdGggZD0iTTQzLjI5MDMgMzEuODYyMUw1Ny45ODU0IDQ2LjU1NzJDNTkuNjgxMiA0OC4yNTMgNTkuNjgxMiA1MS4wMDY4IDU3Ljk4NTQgNTIuNzAyNkw0OS41NzY3IDYxLjEyNDFDNDguMDAyNyA2Mi42OTE3IDQ1LjgzMjQgNjMuNjYzIDQzLjQzNzcgNjMuNjYzSDkuNjk3MjdDMTAuODk2MiA2My42NjYzIDExLjk4MyA2My4xNzkgMTIuNzY4NCA2Mi4zOTM2TDQzLjI5MDMgMzEuODYyMVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl8zNTg4XzEwMzcxKSI+PC9wYXRoPjxwYXRoIGQ9Ik02My42MDg0IDQzLjQ4NjFDNjMuNjA4NCA0NS44ODcyIDYyLjYzMzkgNDguMDYwNyA2MS4wNjMxIDQ5LjYzNDdMNTcuOTg1NiA1Mi43MDI2QzU5LjY4MTQgNTEuMDA2OCA1OS42ODE0IDQ4LjI1MzEgNTcuOTg1NiA0Ni41NTcyTDI0LjE5NyAxMi43Njg3VjQuNDExMjlDMjQuMTk3IDIuMDEzMzkgMjYuMTQyOSAwLjA2NzUwNDkgMjguNTQwOCAwLjA2NzUwNDlINjAuMTIzOEM2Mi4wNDcyIDAuMDY3NTA0OSA2My42MDg0IDEuNjI4NyA2My42MDg0IDMuNTUyMTVWNDMuNDg2MVoiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcl8zNTg4XzEwMzcxKSI+PC9wYXRoPjwvZz48bGluZSB4MT0iMTc0LjUiIHkxPSIxOS44NjM2IiB4Mj0iMTc0LjUiIHkyPSI1MS44NjM2IiBzdHJva2U9IiMxRDFEMUIiPjwvbGluZT48cGF0aCBkPSJNMTk5LjQzOCAyOC43NzI3SDIwMS44MzVMMjA2LjAwMyAzOC45NDg5SDIwNi4xNTZMMjEwLjMyNCAyOC43NzI3SDIxMi43MjFWNDEuODYzNkgyMTAuODQyVjMyLjM5MDZIMjEwLjcyTDIwNi44NTkgNDEuODQ0NUgyMDUuM0wyMDEuNDM5IDMyLjM4NDJIMjAxLjMxN1Y0MS44NjM2SDE5OS40MzhWMjguNzcyN1pNMjE5LjY3MSA0Mi4wNjE4QzIxOC43MDMgNDIuMDYxOCAyMTcuODcgNDEuODU1MSAyMTcuMTcxIDQxLjQ0MThDMjE2LjQ3NyA0MS4wMjQyIDIxNS45NCA0MC40MzgyIDIxNS41NjEgMzkuNjg0QzIxNS4xODYgMzguOTI1NCAyMTQuOTk4IDM4LjAzNjkgMjE0Ljk5OCAzNy4wMTg1QzIxNC45OTggMzYuMDEyOCAyMTUuMTg2IDM1LjEyNjQgMjE1LjU2MSAzNC4zNTk0QzIxNS45NCAzMy41OTIzIDIxNi40NjggMzIuOTkzNiAyMTcuMTQ2IDMyLjU2MzJDMjE3LjgyOCAzMi4xMzI4IDIxOC42MjQgMzEuOTE3NiAyMTkuNTM2IDMxLjkxNzZDMjIwLjA5IDMxLjkxNzYgMjIwLjYyNyAzMi4wMDkyIDIyMS4xNDcgMzIuMTkyNUMyMjEuNjY3IDMyLjM3NTcgMjIyLjEzNCAzMi42NjM0IDIyMi41NDcgMzMuMDU1NEMyMjIuOTYgMzMuNDQ3NSAyMjMuMjg2IDMzLjk1NjcgMjIzLjUyNSAzNC41ODMxQzIyMy43NjQgMzUuMjA1MyAyMjMuODgzIDM1Ljk2MTcgMjIzLjg4MyAzNi44NTIzVjM3LjUyOThIMjE2LjA3OFYzNi4wOThIMjIyLjAxQzIyMi4wMSAzNS41OTUyIDIyMS45MDggMzUuMTQ5OSAyMjEuNzAzIDM0Ljc2MjFDMjIxLjQ5OSAzNC4zNyAyMjEuMjExIDM0LjA2MTEgMjIwLjg0IDMzLjgzNTJDMjIwLjQ3NCAzMy42MDk0IDIyMC4wNDQgMzMuNDk2NSAyMTkuNTQ5IDMzLjQ5NjVDMjE5LjAxMiAzMy40OTY1IDIxOC41NDQgMzMuNjI4NiAyMTguMTQzIDMzLjg5MjhDMjE3Ljc0NyAzNC4xNTI3IDIxNy40NCAzNC40OTM2IDIxNy4yMjIgMzQuOTE1NUMyMTcuMDA5IDM1LjMzMzEgMjE2LjkwMyAzNS43ODY5IDIxNi45MDMgMzYuMjc3VjM3LjM5NTZDMjE2LjkwMyAzOC4wNTE5IDIxNy4wMTggMzguNjEwMSAyMTcuMjQ4IDM5LjA3MDNDMjE3LjQ4MiAzOS41MzA2IDIxNy44MDggMzkuODgyMSAyMTguMjI2IDQwLjEyNUMyMTguNjQ0IDQwLjM2MzYgMjE5LjEzMiA0MC40ODMgMjE5LjY5IDQwLjQ4M0MyMjAuMDUyIDQwLjQ4MyAyMjAuMzgyIDQwLjQzMTggMjIwLjY4MSA0MC4zMjk2QzIyMC45NzkgNDAuMjIzIDIyMS4yMzcgNDAuMDY1NCAyMjEuNDU0IDM5Ljg1NjVDMjIxLjY3MSAzOS42NDc3IDIyMS44MzggMzkuMzg5OSAyMjEuOTUzIDM5LjA4MzFMMjIzLjc2MiAzOS40MDkxQzIyMy42MTcgMzkuOTQxOCAyMjMuMzU3IDQwLjQwODQgMjIyLjk4MiA0MC44MDlDMjIyLjYxMSA0MS4yMDUzIDIyMi4xNDQgNDEuNTE0MiAyMjEuNTgyIDQxLjczNThDMjIxLjAyNCA0MS45NTMxIDIyMC4zODcgNDIuMDYxOCAyMTkuNjcxIDQyLjA2MThaTTIxOC42NzMgMzAuNzM1MUwyMjAuMTY5IDI3Ljc4ODRIMjIyLjE4M0wyMjAuMjAxIDMwLjczNTFIMjE4LjY3M1pNMjI3LjI4NCAzMi4wNDU1TDIyOS40NSAzNS44Njc5TDIzMS42MzcgMzIuMDQ1NUgyMzMuNzI3TDIzMC42NjUgMzYuOTU0NkwyMzMuNzUyIDQxLjg2MzZIMjMxLjY2MkwyMjkuNDUgMzguMTk0NkwyMjcuMjQ1IDQxLjg2MzZIMjI1LjE0OUwyMjguMjA0IDM2Ljk1NDZMMjI1LjE4NyAzMi4wNDU1SDIyNy4yODRaTTIzNS42ODkgNDEuODYzNlYzMi4wNDU1SDIzNy42VjQxLjg2MzZIMjM1LjY4OVpNMjM2LjY1NCAzMC41MzA2QzIzNi4zMjIgMzAuNTMwNiAyMzYuMDM2IDMwLjQxOTggMjM1Ljc5OCAzMC4xOTgyQzIzNS41NjMgMjkuOTcyMyAyMzUuNDQ2IDI5LjcwMzggMjM1LjQ0NiAyOS4zOTI4QzIzNS40NDYgMjkuMDc3NCAyMzUuNTYzIDI4LjgwOSAyMzUuNzk4IDI4LjU4NzRDMjM2LjAzNiAyOC4zNjE1IDIzNi4zMjIgMjguMjQ4NiAyMzYuNjU0IDI4LjI0ODZDMjM2Ljk4NyAyOC4yNDg2IDIzNy4yNyAyOC4zNjE1IDIzNy41MDQgMjguNTg3NEMyMzcuNzQzIDI4LjgwOSAyMzcuODYyIDI5LjA3NzQgMjM3Ljg2MiAyOS4zOTI4QzIzNy44NjIgMjkuNzAzOCAyMzcuNzQzIDI5Ljk3MjMgMjM3LjUwNCAzMC4xOTgyQzIzNy4yNyAzMC40MTk4IDIzNi45ODcgMzAuNTMwNiAyMzYuNjU0IDMwLjUzMDZaTTI0NC4zMDcgNDIuMDYxOEMyNDMuMzU3IDQyLjA2MTggMjQyLjUzOSA0MS44NDY2IDI0MS44NTMgNDEuNDE2MkMyNDEuMTcxIDQwLjk4MTUgMjQwLjY0NyA0MC4zODI4IDI0MC4yOCAzOS42MkMyMzkuOTE0IDM4Ljg1NzMgMjM5LjczIDM3Ljk4MzcgMjM5LjczIDM2Ljk5OTNDMjM5LjczIDM2LjAwMjEgMjM5LjkxOCAzNS4xMjIyIDI0MC4yOTMgMzQuMzU5NEMyNDAuNjY4IDMzLjU5MjMgMjQxLjE5NiAzMi45OTM2IDI0MS44NzggMzIuNTYzMkMyNDIuNTYgMzIuMTMyOCAyNDMuMzYzIDMxLjkxNzYgMjQ0LjI4OCAzMS45MTc2QzI0NS4wMzQgMzEuOTE3NiAyNDUuNjk5IDMyLjA1NjEgMjQ2LjI4MiAzMi4zMzMxQzI0Ni44NjYgMzIuNjA1OCAyNDcuMzM3IDMyLjk4OTQgMjQ3LjY5NSAzMy40ODM3QzI0OC4wNTcgMzMuOTc4IDI0OC4yNzIgMzQuNTU1NCAyNDguMzQxIDM1LjIxNTlIMjQ2LjQ4QzI0Ni4zNzggMzQuNzU1NyAyNDYuMTQ0IDM0LjM1OTQgMjQ1Ljc3NyAzNC4wMjdDMjQ1LjQxNSAzMy42OTQ2IDI0NC45MjkgMzMuNTI4NCAyNDQuMzIgMzMuNTI4NEMyNDMuNzg3IDMzLjUyODQgMjQzLjMyMSAzMy42NjkgMjQyLjkyIDMzLjk1MDNDMjQyLjUyNCAzNC4yMjczIDI0Mi4yMTUgMzQuNjIzNiAyNDEuOTkzIDM1LjEzOTJDMjQxLjc3MiAzNS42NTA2IDI0MS42NjEgMzYuMjU1NyAyNDEuNjYxIDM2Ljk1NDZDMjQxLjY2MSAzNy42NzA1IDI0MS43NyAzOC4yODg0IDI0MS45ODcgMzguODA4MkMyNDIuMjA0IDM5LjMyODEgMjQyLjUxMSAzOS43MzA4IDI0Mi45MDcgNDAuMDE2M0MyNDMuMzA4IDQwLjMwMTkgMjQzLjc3OSA0MC40NDQ2IDI0NC4zMiA0MC40NDQ2QzI0NC42ODIgNDAuNDQ0NiAyNDUuMDEgNDAuMzc4NiAyNDUuMzA0IDQwLjI0NjVDMjQ1LjYwMyA0MC4xMTAxIDI0NS44NTIgMzkuOTE2MiAyNDYuMDUyIDM5LjY2NDhDMjQ2LjI1NyAzOS40MTM0IDI0Ni40IDM5LjExMDggMjQ2LjQ4IDM4Ljc1NzFIMjQ4LjM0MUMyNDguMjcyIDM5LjM5MjEgMjQ4LjA2NiAzOS45NTg4IDI0Ny43MjEgNDAuNDU3NEMyNDcuMzc1IDQwLjk1NiAyNDYuOTEzIDQxLjM0OCAyNDYuMzMzIDQxLjYzMzVDMjQ1Ljc1OCA0MS45MTkgMjQ1LjA4MyA0Mi4wNjE4IDI0NC4zMDcgNDIuMDYxOFpNMjU0LjUyIDQyLjA2MThDMjUzLjYgNDIuMDYxOCAyNTIuNzk2IDQxLjg1MDkgMjUyLjExIDQxLjQyOUMyNTEuNDI0IDQxLjAwNzEgMjUwLjg5MiA0MC40MTY5IDI1MC41MTIgMzkuNjU4NEMyNTAuMTMzIDM4Ljg5OTkgMjQ5Ljk0MyAzOC4wMTM1IDI0OS45NDMgMzYuOTk5M0MyNDkuOTQzIDM1Ljk4MDggMjUwLjEzMyAzNS4wOTAyIDI1MC41MTIgMzQuMzI3NEMyNTAuODkyIDMzLjU2NDYgMjUxLjQyNCAzMi45NzIzIDI1Mi4xMSAzMi41NTA0QzI1Mi43OTYgMzIuMTI4NiAyNTMuNiAzMS45MTc2IDI1NC41MiAzMS45MTc2QzI1NS40NDEgMzEuOTE3NiAyNTYuMjQ0IDMyLjEyODYgMjU2LjkzIDMyLjU1MDRDMjU3LjYxNiAzMi45NzIzIDI1OC4xNDkgMzMuNTY0NiAyNTguNTI4IDM0LjMyNzRDMjU4LjkwNyAzNS4wOTAyIDI1OS4wOTcgMzUuOTgwOCAyNTkuMDk3IDM2Ljk5OTNDMjU5LjA5NyAzOC4wMTM1IDI1OC45MDcgMzguODk5OSAyNTguNTI4IDM5LjY1ODRDMjU4LjE0OSA0MC40MTY5IDI1Ny42MTYgNDEuMDA3MSAyNTYuOTMgNDEuNDI5QzI1Ni4yNDQgNDEuODUwOSAyNTUuNDQxIDQyLjA2MTggMjU0LjUyIDQyLjA2MThaTTI1NC41MjYgNDAuNDU3NEMyNTUuMTIzIDQwLjQ1NzQgMjU1LjYxNyA0MC4yOTk3IDI1Ni4wMDkgMzkuOTg0NEMyNTYuNDAxIDM5LjY2OSAyNTYuNjkxIDM5LjI0OTMgMjU2Ljg3OSAzOC43MjUyQzI1Ny4wNyAzOC4yMDEgMjU3LjE2NiAzNy42MjM2IDI1Ny4xNjYgMzYuOTkyOUMyNTcuMTY2IDM2LjM2NjUgMjU3LjA3IDM1Ljc5MTIgMjU2Ljg3OSAzNS4yNjcxQzI1Ni42OTEgMzQuNzM4NiAyNTYuNDAxIDM0LjMxNDYgMjU2LjAwOSAzMy45OTVDMjU1LjYxNyAzMy42NzU0IDI1NS4xMjMgMzMuNTE1NiAyNTQuNTI2IDMzLjUxNTZDMjUzLjkyNiAzMy41MTU2IDI1My40MjcgMzMuNjc1NCAyNTMuMDMxIDMzLjk5NUMyNTIuNjM5IDM0LjMxNDYgMjUyLjM0NyAzNC43Mzg2IDI1Mi4xNTUgMzUuMjY3MUMyNTEuOTY4IDM1Ljc5MTIgMjUxLjg3NCAzNi4zNjY1IDI1MS44NzQgMzYuOTkyOUMyNTEuODc0IDM3LjYyMzYgMjUxLjk2OCAzOC4yMDEgMjUyLjE1NSAzOC43MjUyQzI1Mi4zNDcgMzkuMjQ5MyAyNTIuNjM5IDM5LjY2OSAyNTMuMDMxIDM5Ljk4NDRDMjUzLjQyNyA0MC4yOTk3IDI1My45MjYgNDAuNDU3NCAyNTQuNTI2IDQwLjQ1NzRaIiBmaWxsPSIjMkMyQjJCIj48L3BhdGg+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzM1ODhfMTAzNzEiIHgxPSIwLjAzMjA1NzUiIHkxPSIxNi42MDU5IiB4Mj0iMjkuMjk0MSIgeTI9IjQ1Ljg2OCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMC41NSIgc3RvcC1jb2xvcj0iI0U0MDUyMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMC43MSIgc3RvcC1jb2xvcj0iI0NFMEYyMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzlDMjcyNCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzM1ODhfMTAzNzEiIHgxPSI5LjY5NzI3IiB5MT0iNDcuNzY1OCIgeDI9IjU5LjI1ODEiIHkyPSI0Ny43NjU4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjU1IiBzdG9wLWNvbG9yPSIjRTQwNTIxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIwLjk1IiBzdG9wLWNvbG9yPSIjOUMyNzI0Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50Ml9saW5lYXJfMzU4OF8xMDM3MSIgeDE9IjI0LjE5NyIgeTE9IjI2LjM4NjciIHgyPSI2My42MDg0IiB5Mj0iMjYuMzg2NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiM5QzI3MjQiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjAuMTEiIHN0b3AtY29sb3I9IiNBNzIxMjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjAuMjkiIHN0b3AtY29sb3I9IiNDNTEzMjIiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjAuNDUiIHN0b3AtY29sb3I9IiNFNDA1MjEiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjxjbGlwUGF0aCBpZD0iY2xpcDBfMzU4OF8xMDM3MSI+PHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2My42MTE2IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjA1Nzg2MTMpIj48L3JlY3Q+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+";
 const SHORT={'Grupo SM':'SM corp','SM LIJ':'SM LIJ','Dayton':'Dayton','Escuela Católica':'Esc. Cat.','Fundación SM':'Fundación'};
 
-// posts = contenido publicado en la ventana (posts + reels), dato AUTORITATIVO del API de AgencyAnalytics (MCP)
-// growth = crecimiento neto de seguidores en el periodo (IG incluido, vía API)
-// url = perfil real en cada red (IG handle / IDs de FB·LinkedIn·YouTube vía AgencyAnalytics)
+// Ventana: 1-ene a 21-oct-2026 (último día completo). Fuente: API de AgencyAnalytics (MCP), extraída el 22-oct-2026.
+// followers = seguidores al cierre (YouTube: n/d, el API de canal no entrega el total de suscriptores)
+// growth = crecimiento neto en el periodo. IG de LIJ/Dayton/Esc. Cat./Fundación: desde abr (inicio del histórico); TikTok: ago–oct.
+// reach = alcance acumulado (suma mensual; no deduplica personas). IG: reach · FB: users_reached · LinkedIn: impresiones · YouTube/TikTok: vistas
+// views = vistas/impresiones de contenido (denominador del eng-rate). IG: views · FB: post_media_view · LinkedIn: impresiones · TikTok: vistas
+// posts = contenido publicado (posts + reels). eng = interacciones (IG engagement · FB page_post_engagements · LinkedIn social_actions · TikTok likes+coment.+compartidos)
 const DATA=[
- {line:'Grupo SM', net:'Facebook', handle:'SM México', followers:168902, growth:-253, reach:263415, posts:191, eng:8903, url:'https://www.facebook.com/491125644302139'},
- {line:'Grupo SM', net:'Instagram', handle:'smmexicooficial', followers:6929, growth:155, reach:24228, posts:125, eng:5499, url:'https://www.instagram.com/smmexicooficial/'},
- {line:'Grupo SM', net:'LinkedIn', handle:'SM México', followers:2612, growth:490, reach:77602, posts:90, eng:2617, url:'https://www.linkedin.com/company/54277178/'},
- {line:'Grupo SM', net:'YouTube', handle:'SM México', followers:6790, growth:93, reach:15111, posts:27, eng:null, url:'https://www.youtube.com/channel/UCuMWsSl3sOzVDDBmVQIbu4g'},
- {line:'SM LIJ', net:'Facebook', handle:'Literatura SM México', followers:79517, growth:-82, reach:190676, posts:223, eng:8287, url:'https://www.facebook.com/635216013234891'},
- {line:'SM LIJ', net:'Instagram', handle:'smlij_mx', followers:3417, growth:218, reach:56469, posts:129, eng:26784, url:'https://www.instagram.com/smlij_mx/'},
- {line:'SM LIJ', net:'TikTok', handle:'SM LiteraturaInfantilYJuvenil', followers:6802, growth:3, reach:5380, posts:null, eng:196, url:'https://www.tiktok.com/search?q=SM%20LiteraturaInfantilYJuvenil'},
- {line:'Dayton', net:'Facebook', handle:'Dayton México', followers:10364, growth:-30, reach:31948, posts:100, eng:1773, url:'https://www.facebook.com/470910376299356'},
- {line:'Dayton', net:'Instagram', handle:'dayton_mexico', followers:321, growth:26, reach:8442, posts:80, eng:1383, url:'https://www.instagram.com/dayton_mexico/'},
- {line:'Dayton', net:'LinkedIn', handle:'University of Dayton Publishing', followers:119, growth:50, reach:8027, posts:66, eng:616, url:'https://www.linkedin.com/company/104427076/'},
- {line:'Dayton', net:'YouTube', handle:'University of Dayton Publishing', followers:64, growth:5, reach:422, posts:6, eng:null, url:'https://www.youtube.com/channel/UCJ6M0LvgVY6-PB0Vz1ljsjw'},
- {line:'Escuela Católica', net:'Facebook', handle:'SM Escuela Católica', followers:4211, growth:36, reach:52161, posts:148, eng:2920, url:'https://www.facebook.com/100453134651388'},
- {line:'Escuela Católica', net:'Instagram', handle:'smescuelacatolica', followers:391, growth:20, reach:12976, posts:95, eng:1356, url:'https://www.instagram.com/smescuelacatolica/'},
- {line:'Escuela Católica', net:'YouTube', handle:'Escuela Católica / el Podcast', followers:92, growth:10, reach:228, posts:0, eng:null, url:'https://www.youtube.com/channel/UCIEHbCdOyCTbVVJPqZPz7pw'},
- {line:'Fundación SM', net:'Facebook', handle:'Fundación SM México', followers:11395, growth:815, reach:390545, posts:278, eng:19014, url:'https://www.facebook.com/141028066513126'},
- {line:'Fundación SM', net:'Instagram', handle:'fundacionsmx', followers:4873, growth:573, reach:275000, posts:189, eng:43609, url:'https://www.instagram.com/fundacionsmx/'},
- {line:'Fundación SM', net:'LinkedIn', handle:'Fundación SM México', followers:1006, growth:345, reach:54118, posts:206, eng:2525, url:'https://www.linkedin.com/company/104198980/'},
- {line:'Fundación SM', net:'YouTube', handle:'Fundación SM México', followers:1290, growth:22, reach:1043, posts:2, eng:null, url:'https://www.youtube.com/channel/UCZ9QDZLTqETcwqJ-GKasI2g'},
+ {line:'Grupo SM', net:'Facebook', handle:'SM México', followers:167928, growth:-296, reach:163085, views:175881, posts:204, eng:9618, url:'https://www.facebook.com/491125644302139'},
+ {line:'Grupo SM', net:'Instagram', handle:'smmexicooficial', followers:6958, growth:184, reach:15818, views:160696, posts:135, eng:5875, url:'https://www.instagram.com/smmexicooficial/'},
+ {line:'Grupo SM', net:'LinkedIn', handle:'SM México', followers:2700, growth:582, reach:107104, views:107104, posts:109, eng:3261, url:'https://www.linkedin.com/company/54277178/'},
+ {line:'Grupo SM', net:'YouTube', handle:'SM México', followers:null, growth:140, reach:26237, views:26237, posts:37, eng:null, url:'https://www.youtube.com/channel/UCuMWsSl3sOzVDDBmVQIbu4g'},
+ {line:'SM LIJ', net:'Facebook', handle:'Literatura SM México', followers:79078, growth:-111, reach:119681, views:153172, posts:230, eng:9206, url:'https://www.facebook.com/635216013234891'},
+ {line:'SM LIJ', net:'Instagram', handle:'smlij_mx', followers:3653, growth:453, reach:55809, views:757072, posts:135, eng:33337, url:'https://www.instagram.com/smlij_mx/'},
+ {line:'SM LIJ', net:'TikTok', handle:'SM LiteraturaInfantilYJuvenil', followers:6761, growth:-12, reach:9773, views:11153, posts:21, eng:631, url:'https://www.tiktok.com/search?q=SM%20LiteraturaInfantilYJuvenil'},
+ {line:'Dayton', net:'Facebook', handle:'Dayton México', followers:10314, growth:-38, reach:18469, views:30935, posts:104, eng:1817, url:'https://www.facebook.com/470910376299356'},
+ {line:'Dayton', net:'Instagram', handle:'dayton_mexico', followers:316, growth:21, reach:7646, views:24011, posts:83, eng:1412, url:'https://www.instagram.com/dayton_mexico/'},
+ {line:'Dayton', net:'LinkedIn', handle:'University of Dayton Publishing', followers:120, growth:51, reach:8305, views:8305, posts:66, eng:593, url:'https://www.linkedin.com/company/104427076/'},
+ {line:'Dayton', net:'YouTube', handle:'University of Dayton Publishing', followers:null, growth:11, reach:794, views:794, posts:10, eng:null, url:'https://www.youtube.com/channel/UCJ6M0LvgVY6-PB0Vz1ljsjw'},
+ {line:'Escuela Católica', net:'Facebook', handle:'SM Escuela Católica', followers:4203, growth:45, reach:34159, views:45012, posts:151, eng:2995, url:'https://www.facebook.com/100453134651388'},
+ {line:'Escuela Católica', net:'Instagram', handle:'smescuelacatolica', followers:387, growth:16, reach:9719, views:29809, posts:103, eng:1474, url:'https://www.instagram.com/smescuelacatolica/'},
+ {line:'Escuela Católica', net:'YouTube', handle:'Escuela Católica / el Podcast', followers:null, growth:14, reach:348, views:348, posts:0, eng:null, url:'https://www.youtube.com/channel/UCIEHbCdOyCTbVVJPqZPz7pw'},
+ {line:'Fundación SM', net:'Facebook', handle:'Fundación SM México', followers:11451, growth:915, reach:239241, views:397832, posts:335, eng:21886, url:'https://www.facebook.com/141028066513126'},
+ {line:'Fundación SM', net:'Instagram', handle:'fundacionsmx', followers:5511, growth:1211, reach:313759, views:1603887, posts:236, eng:55577, url:'https://www.instagram.com/fundacionsmx/'},
+ {line:'Fundación SM', net:'LinkedIn', handle:'Fundación SM México', followers:1049, growth:388, reach:62433, views:62433, posts:254, eng:2865, url:'https://www.linkedin.com/company/104198980/'},
+ {line:'Fundación SM', net:'YouTube', handle:'Fundación SM México', followers:null, growth:28, reach:1386, views:1386, posts:2, eng:null, url:'https://www.youtube.com/channel/UCZ9QDZLTqETcwqJ-GKasI2g'},
 ];
-const MONTHS=8; // ventana YTD ene–ago (8 meses completos; sep apenas inicia)
+const MONTHS=294/30.4375; // 1-ene a 21-oct = 294 días ≈ 9.66 meses
 const perMonth=p=>p==null?null:p/MONTHS;
 
-// diagnóstico cualitativo (base: perfil de Instagram) — 3=Fuerte 2=Medio 1=Débil
+// diagnóstico cualitativo — 3=Fuerte 2=Medio 1=Débil (semáforo de la auditoría original; textos con cifras al 21-oct)
 const QUAL={
- 'Grupo SM':{id:3,co:2,cm:2,h:'Buena cobertura (FB·IG·LinkedIn·YouTube) con nombre y logo consistentes, pero sin TikTok ni X. Contenido de plantilla salvo su propio marketing (cursos de TikTok, su mejor reel). FB grande pero en caída (−253); IG, LinkedIn y YouTube crecen. Engagement tibio para su tamaño y casi cero tráfico a web (388 sesiones, 72% rebote).'},
- 'SM LIJ':{id:2,co:2,cm:2,h:'Tono infantil cálido y comunidad lectora que comparte mucho en IG. Única línea con TikTok —acorde a su público juvenil— pero sin LinkedIn ni YouTube. Nombre tipo acrónimo (“SMLIJ”) y logo poco legibles. FB cae levemente (−82); IG crece bien (+218). Su contenido de autores, ferias y aniversarios funciona.'},
- 'Dayton':{id:1,co:2,cm:1,h:'La identidad más débil pese a cubrir FB·IG·LinkedIn·YouTube: mal categorizada (“Org. sin fines de lucro”), bio en inglés y logo fuera de la marca SM. Contenido EFL correcto pero publica al vacío —audiencias mínimas en todas las redes— y el peor tráfico a web (25s, rebote alto). IG y LinkedIn crecen poco.'},
- 'Escuela Católica':{id:2,co:3,cm:1,h:'Mejor factura de marca (logo SM rojo, bio clara) pero categoría errónea (“Emprendedor”) y sin LinkedIn. Crece en FB·IG·YouTube con audiencias diminutas. Su mejor contenido son eventos y alianzas (CNEP, CIEC); desperdicia esfuerzo en clips de su podcast (IG/YouTube) que rinden ~10× menos.'},
- 'Fundación SM':{id:3,co:3,cm:3,h:'La operación más sólida y consistente en TODAS las redes (FB·IG·LinkedIn·YouTube): categoría correcta, logo limpio, misión clara, highlights por evento. Crece fuerte en las cuatro (FB +815, IG +573, LinkedIn +345). Fórmula ganadora: convocatorias de premios + video con personas. Único hueco: no convierte a web (rol de awareness).'},
+ 'Grupo SM':{id:3,co:2,cm:2,h:'Buena cobertura (FB·IG·LinkedIn·YouTube) con nombre y logo consistentes, sin TikTok ni X. FB grande pero en caída (−296); IG (+184), LinkedIn (+582) y YouTube (+140) crecen. La cadencia se desplomó desde agosto (FB: 2, 4 y 11 piezas en ago, sep y oct vs. ~25/mes en el primer semestre). Lo que más rinde son webinars de formación docente y su propio marketing. Casi nulo tráfico social a web (451 sesiones, 69% rebote).'},
+ 'SM LIJ':{id:2,co:2,cm:2,h:'Tono infantil cálido y comunidad lectora que comparte mucho en IG. Única línea con TikTok, pero sin videos nuevos desde el 25-jun (21 en el año). Sin LinkedIn ni YouTube. FB cae (−111); IG crece (+453 desde abril, +210 solo en octubre). La publicación baja desde agosto (oct: 2 en FB, 1 en IG). Fórmula vigente: autor + libro + evento (book clubs, meet & greets).'},
+ 'Dayton':{id:1,co:2,cm:1,h:'La identidad más débil pese a cubrir FB·IG·LinkedIn·YouTube: mal categorizada (“Org. sin fines de lucro”), bio en inglés y logo fuera de la marca SM. Audiencias mínimas en todas las redes y cero publicaciones en octubre en las cuatro. Su mejor contenido: webinars para docentes de inglés y SpellFest. Tráfico social a web marginal (322 sesiones, 35 s de duración).'},
+ 'Escuela Católica':{id:2,co:3,cm:1,h:'Mejor factura de marca (logo SM rojo, bio clara) pero categoría errónea (“Emprendedor”) y sin LinkedIn. Audiencias diminutas (IG 387). Prácticamente sin publicar desde agosto (FB: 0, 3 y 0 piezas en ago, sep y oct). Su mejor contenido son eventos y alianzas (CNEP, CIEC): 2.5K vistas vs. ~670 del mejor clip del podcast.'},
+ 'Fundación SM':{id:3,co:3,cm:3,h:'La operación más sólida y la única que mantuvo cadencia todo el año (FB·IG·LinkedIn). Crece fuerte: FB +915, IG +1,211 (+509 solo en octubre), LinkedIn +388. Fórmula ganadora: convocatorias de premios (Premios SM, Iberoamérica Ilustra) que piden una acción. Su GA4 registra solo 368 sesiones en el año y 0 de búsqueda orgánica: patrón de medición rota, pendiente de verificar antes de concluir sobre conversión a web.'},
 };
 const RT={3:{t:'Fuerte',c:'#157A38',b:'#E7F3EB'},2:{t:'Medio',c:'#8A6510',b:'#F7EED7'},1:{t:'Débil',c:'#BE1409',b:'#FBE9E7'}};
 const igUrl=l=>{const d=DATA.find(x=>x.line===l&&x.net==='Instagram');return d?d.url:null;};
 
-// volumen mensual (ene–jun 2026) por línea — del API de AgencyAnalytics. fb=posts+reels, IG separado feed/reel, li=posts
-const MLBL=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep'];
+// volumen mensual (ene–21 oct 2026) por línea — API de AgencyAnalytics. fb=posts+reels, IG separado feed/reel, li=posts. Oct = mes parcial (21 días).
+const MLBL=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct*'];
 const MONTHLY={
- 'Grupo SM':        {fb:[25,22,26,38,36,24,16,2,2], igFeed:[14,10,16,19,14,14,9,0,1], igReel:[3,4,2,6,7,3,2,1,0],  li:[4,7,10,13,22,14,13,4,3]},
- 'SM LIJ':          {fb:[27,26,46,30,28,26,27,12,1], igFeed:[7,12,11,9,9,13,14,13,2],  igReel:[5,3,13,5,7,4,5,4,2],  li:[0,0,0,0,0,0,0,0,0]},
- 'Dayton':          {fb:[8,8,12,11,17,19,17,5,1],   igFeed:[4,6,10,7,13,11,3,5,1],   igReel:[1,1,1,3,2,4,7,0,0],   li:[4,6,10,6,10,14,12,2,2]},
- 'Escuela Católica':{fb:[18,28,37,24,8,16,19,0,0],  igFeed:[10,8,7,4,6,9,5,0,0],     igReel:[4,10,14,10,0,3,6,0,0],li:[0,0,0,0,0,0,0,0,0]},
- 'Fundación SM':    {fb:[29,26,50,29,58,26,31,24,6], igFeed:[17,18,35,18,23,13,7,13,2],igReel:[3,1,5,3,12,5,9,4,2],  li:[21,24,41,25,35,20,20,17,4]},
+ 'Grupo SM':        {fb:[25,22,26,38,36,24,16,2,4,11],  igFeed:[14,10,16,19,13,14,9,0,4,4],  igReel:[3,4,2,6,7,3,2,1,0,4],   li:[4,7,10,13,22,14,13,4,10,12]},
+ 'SM LIJ':          {fb:[27,26,46,30,28,26,27,12,6,2],  igFeed:[7,12,11,9,9,13,14,9,7,1],    igReel:[5,3,13,5,7,4,5,1,0,0],  li:[0,0,0,0,0,0,0,0,0,0]},
+ 'Dayton':          {fb:[8,8,12,11,17,19,19,5,5,0],     igFeed:[4,6,10,7,13,11,5,5,3,0],     igReel:[1,1,1,3,2,4,6,0,1,0],   li:[4,6,10,6,10,14,12,2,2,0]},
+ 'Escuela Católica':{fb:[18,28,37,24,8,16,17,0,3,0],    igFeed:[10,8,7,4,6,9,3,0,1,1],       igReel:[4,10,14,10,0,3,7,0,3,3],li:[0,0,0,0,0,0,0,0,0,0]},
+ 'Fundación SM':    {fb:[29,26,50,29,57,25,31,23,30,35],igFeed:[17,18,35,18,23,12,7,13,16,26],igReel:[3,1,5,3,12,5,9,4,6,3], li:[21,24,41,25,35,19,20,17,22,30]},
 };
 const CH=[{k:'fb',l:'Facebook',c:'#1877F2'},{k:'igFeed',l:'IG · feed',c:'#D6336C'},{k:'igReel',l:'IG · reel',c:'#8A1E48'},{k:'li',l:'LinkedIn',c:'#0A66C2'}];
 const sum=a=>a.reduce((x,y)=>x+y,0);
 
-// GA4 — tráfico web por canal (ene–jun 2026). Solo líneas con GA4 conectado.
+// GA4 — sesiones por canal (1-ene a 21-oct 2026), canal "Organic Social". Solo líneas con GA4 conectado.
 const GA4=[
- {line:'Grupo SM', total:14486, social:388, bounce:72, dur:103},
- {line:'Dayton', total:18579, social:277, bounce:64, dur:28},
- {line:'Fundación SM', total:347, social:1, bounce:100, dur:0},
+ {line:'Grupo SM', total:25115, social:451, bounce:68.5, dur:97},
+ {line:'Dayton', total:26869, social:322, bounce:64.3, dur:35},
+ {line:'Fundación SM', total:368, social:1, bounce:100, dur:0},
 ];
-// Top contenido por desempeño — por línea (IG, vía API). views/likes y G+C = guardados+compartidos
+// Top contenido por vistas — por línea (IG, posts + reels, 1-ene a 21-oct 2026). G+C = guardados + compartidos
 const TOPL={
  'Grupo SM':{items:[
-   {t:'Teaser curso “Más matrículas por TikTok”', tag:'Promo', views:1509, likes:110, ss:9},
-   {t:'La participación docente es el corazón del SIEI', tag:'Evento', views:1077, likes:36, ss:5},
-   {t:'Gracias 2025, bienvenido 2026', tag:'Comunidad', views:1062, likes:39, ss:6},
-   {t:'El Cantoral: sede del SIEI', tag:'Evento', views:947, likes:42, ss:5},
-   {t:'“Views no son matrículas” (curso TikTok)', tag:'Promo', views:640, likes:40, ss:2},
- ], note:'Lo que más rinde es su propio marketing (cursos “Más matrículas por TikTok”) y los momentos de comunidad. El SIEI domina el feed pero con alcance modesto (máx ~1.5K vistas). Falta una fórmula propia de mayor tracción.'},
+   {t:'Webinar “Magnifica Humanitas” (invitación)', tag:'Evento', views:2690, likes:38, ss:12},
+   {t:'Teaser: TikTok para llenar matrículas', tag:'Promo', views:1557, likes:111, ss:8},
+   {t:'Webinar de comunicación digital escolar', tag:'Promo', views:1484, likes:52, ss:7},
+   {t:'La participación docente es el corazón del SIEI', tag:'Evento', views:1080, likes:36, ss:5},
+   {t:'Gracias 2025, bienvenido 2026', tag:'Comunidad', views:1066, likes:39, ss:6},
+ ], note:'Rinden los webinars (formación docente, educación católica) y su propio marketing (cursos de TikTok para matrículas). Techo bajo: máximo ~2.7K vistas. Desde agosto publica poco y nada nuevo entra al top.'},
  'SM LIJ':{items:[
-   {t:'“Casi medio año” 30 años · presentación FIL Coyoacán', tag:'Evento', views:2740, likes:169, ss:7},
-   {t:'Día Internacional del Libro', tag:'Comunidad', views:2210, likes:19, ss:0},
-   {t:'“Fábulas Justas” · presentación FIL Coyoacán', tag:'Evento', views:1854, likes:113, ss:121},
-   {t:'Meet & Greet “Fábulas Justas” con el autor', tag:'Evento', views:1692, likes:151, ss:77},
-   {t:'“Lo que comen los diablitos” · Premio Cuatrogatos', tag:'Premio', views:1470, likes:75, ss:10},
- ], note:'Fórmula clara: autor + libro + evento. Los Meet&Greet y presentaciones en ferias (FIL) disparan compartidos —la comunidad lectora difunde—. Aniversarios y premios también funcionan.'},
+   {t:'“Casi medio año” regresa · 30 años', tag:'Promo', views:4282, likes:94, ss:9},
+   {t:'Book Club de M.F. (15 de agosto)', tag:'Evento', views:3587, likes:122, ss:14},
+   {t:'Bookclub “Fábulas justas” · Meet & Greet', tag:'Evento', views:3554, likes:118, ss:155},
+   {t:'Meet & Greet M.F. con Malpica y Herrerías', tag:'Evento', views:3484, likes:165, ss:49},
+   {t:'Presentación de “Xocolatl”', tag:'Evento', views:3072, likes:74, ss:21},
+ ], note:'Fórmula clara: autor + libro + evento. Los book clubs y meet & greets dominan el top; “Fábulas justas” genera 155 guardados+compartidos, la señal de intención más alta de la línea.'},
  'Dayton':{items:[
-   {t:'“What makes an impactful English program?”', tag:'Promo', views:1250, likes:82, ss:13},
-   {t:'Caso de éxito · Colegio Carl Rogers', tag:'Caso', views:572, likes:16, ss:27},
-   {t:'English Learning Webs', tag:'Promo', views:494, likes:30, ss:2},
-   {t:'Pinwheel for tots', tag:'Promo', views:446, likes:35, ss:13},
-   {t:'“May in the classroom hits different” (humor)', tag:'Humor', views:401, likes:9, ss:1},
- ], note:'Showcases de producto (programas de inglés) + casos de éxito + humor docente (memes ELT). Todo en inglés. Alcance bajo (máx ~1.2K); el humor docente conecta mejor por interacción relativa.'},
+   {t:'Webinar SEL para docentes de inglés', tag:'Promo', views:1335, likes:20, ss:4},
+   {t:'“What makes an impactful English program?”', tag:'Promo', views:1260, likes:83, ss:13},
+   {t:'Dayton en el SIEI 2026', tag:'Evento', views:975, likes:32, ss:5},
+   {t:'SpellFest 2026: mejores momentos', tag:'Evento', views:931, likes:44, ss:7},
+   {t:'Gracias por SpellFest', tag:'Comunidad', views:760, likes:26, ss:2},
+ ], note:'Showcases de programa + eventos propios (SpellFest). Todo en inglés. Alcance bajo (máx ~1.3K) y sin publicaciones en octubre.'},
  'Escuela Católica':{items:[
-   {t:'“Bienestar que educa, fe que transforma” (evento)', tag:'Evento', views:2473, likes:51, ss:6},
-   {t:'Webinar Magnifica Humanitas (gracias)', tag:'Evento', views:888, likes:18, ss:2},
-   {t:'Firma de convenio con la CNEP', tag:'Alianza', views:857, likes:35, ss:2},
-   {t:'Felicitación a Hna. Ana Luisa · CNEP', tag:'Alianza', views:763, likes:42, ss:1},
-   {t:'“Pensamiento crítico” (clip del podcast)', tag:'Institucional', views:671, likes:46, ss:3},
- ], note:'Su mejor contenido son los posts de eventos y alianzas (CNEP, CIEC, webinars con rostros), no los reels: los clips del podcast (ECPodcast) rinden poco (~200-670). Recomendación: menos clip suelto, más evento/alianza/rostro.'},
+   {t:'“Bienestar que educa, fe que transforma” (evento)', tag:'Evento', views:2545, likes:52, ss:3},
+   {t:'La escuela católica gana relevancia', tag:'Institucional', views:1236, likes:6, ss:4},
+   {t:'Webinar Magnifica Humanitas (gracias)', tag:'Evento', views:916, likes:18, ss:2},
+   {t:'Firma de convenio con la CNEP', tag:'Alianza', views:874, likes:35, ss:2},
+   {t:'Felicitación a Hna. Ana Luisa · CNEP', tag:'Alianza', views:765, likes:41, ss:1},
+ ], note:'Rinden eventos y alianzas (CNEP, CIEC, webinars con rostros). El mejor clip del podcast queda en ~670 vistas, ~4× menos que el evento líder. Recomendación: menos clip suelto, más evento/alianza/rostro.'},
  'Fundación SM':{items:[
-   {t:'Premios SM — convocatoria Barco de Vapor / Gran Angular', tag:'Premio', views:21052, likes:626, ss:430},
-   {t:'Ganadoras de los Premios SM 2026', tag:'Premio', views:12094, likes:457, ss:59},
-   {t:'PILIJ — ¿A quién postularías?', tag:'Premio', views:7051, likes:78, ss:12},
-   {t:'Pronto: ganadores Barco de Vapor / Gran Angular', tag:'Premio', views:5697, likes:85, ss:8},
-   {t:'Encuentro de Promotores de Lectura · Yucatán', tag:'Evento', views:3085, likes:39, ss:3},
- ], note:'El 60× de alcance son las CONVOCATORIAS DE PREMIOS (Premios SM, PILIJ): dan al público algo que HACER y disparan guardados+compartidos. El contenido institucional (SIEI, bienestar) rinde ~10× menos.'},
+   {t:'Convocatoria 31ª Premios SM (septiembre)', tag:'Premio', views:68563, likes:967, ss:1174},
+   {t:'Premios SM: “etiqueta a quien escribe”', tag:'Premio', views:65580, likes:1627, ss:2560},
+   {t:'Convocatoria Catálogo Iberoamérica Ilustra', tag:'Premio', views:43746, likes:1188, ss:1255},
+   {t:'Exposición 16 Catálogo Iberoamérica Ilustra', tag:'Evento', views:30742, likes:552, ss:46},
+   {t:'Premio Iberoamericano SM · Jorge Luján', tag:'Premio', views:30738, likes:294, ss:20},
+ ], note:'Las CONVOCATORIAS dominan: piden una acción (postular, etiquetar) y disparan guardados+compartidos. La de octubre que pide etiquetar a alguien logra 2,560 G+C, el máximo del tablero. Verificar si hubo pauta: si la hubo, estas cifras mezclan alcance pagado.'},
 };
 const TC_TAG={Premio:{c:'#B00418',b:'#FCEBED'},Evento:{c:'#2C6E68',b:'#E3F1EF'},Alianza:{c:'#1D6FB8',b:'#E5F0FA'},Promo:{c:'#9A6B0F',b:'#F7EED7'},Caso:{c:'#5A3D8A',b:'#EDE7F6'},Humor:{c:'#A33B6E',b:'#FBE9F1'},Comunidad:{c:'#3A6E6A',b:'#E6F1F0'},Institucional:{c:'#646A75',b:'#EEF0F3'}};
 
@@ -378,7 +381,7 @@ function App(){
   const totFol=filtered.reduce((s,d)=>s+d.followers,0);
   const totGrowth=filtered.reduce((s,d)=>s+(d.growth||0),0);
   const totReach=filtered.reduce((s,d)=>s+d.reach,0);
-  const ratios=filtered.map(d=>d.reach/d.followers);
+  const ratios=filtered.filter(d=>d.followers).map(d=>d.reach/d.followers);
   const avgRatio=ratios.length?ratios.reduce((a,b)=>a+b,0)/ratios.length:0;
 
   const agg=useMemo(()=>{
@@ -394,12 +397,12 @@ function App(){
   const growthRows=useMemo(()=>filtered.filter(d=>d.growth!=null).sort((a,b)=>b.growth-a.growth),[filtered]);
   const gMax=Math.max(...growthRows.map(d=>Math.abs(d.growth)),1);
 
-  const effRows=useMemo(()=>[...filtered].map(d=>({...d,ratio:d.reach/d.followers}))
+  const effRows=useMemo(()=>filtered.filter(d=>d.followers).map(d=>({...d,ratio:d.reach/d.followers}))
     .sort((a,b)=>b.ratio-a.ratio).slice(0,8),[filtered]);
   const effMax=Math.max(...effRows.map(d=>d.ratio),1);
 
   // frequency matrix (posts/mes) — redes con conteo medido
-  const FREQ_NETS=['Facebook','Instagram','LinkedIn','YouTube'];
+  const FREQ_NETS=['Facebook','Instagram','LinkedIn','YouTube','TikTok'];
   const freqLines=LINES.filter(l=>lines.length===0||lines.includes(l));
   const freqNets=FREQ_NETS.filter(n=>nets.length===0||nets.includes(n));
   const freqCell=(l,n)=>{const d=filtered.find(x=>x.line===l&&x.net===n);return d&&d.posts!=null?perMonth(d.posts):null;};
@@ -425,8 +428,8 @@ function App(){
     const r=[...filtered];
     r.sort((a,b)=>{
       let va=a[sort.k],vb=b[sort.k];
-      if(sort.k==='ratio'){va=a.reach/a.followers;vb=b.reach/b.followers;}
-      if(sort.k==='er'){va=a.eng!=null?a.eng/a.reach:-1;vb=b.eng!=null?b.eng/b.reach:-1;}
+      if(sort.k==='ratio'){va=a.followers?a.reach/a.followers:null;vb=b.followers?b.reach/b.followers:null;}
+      if(sort.k==='er'){va=a.eng!=null?a.eng/a.views:-1;vb=b.eng!=null?b.eng/b.views:-1;}
       if(va==null)va=-1e15;if(vb==null)vb=-1e15;
       if(typeof va==='string')return sort.d*va.localeCompare(vb);
       return sort.d*(va-vb);
@@ -450,8 +453,8 @@ function App(){
       <div className="mh-top">
         <img className="mh-logo" src={SM_LOGO} alt="SM México"/>
         <div className="hmeta">
-          Ventana <b>Este año 2026</b> · ene–3 jul · Fuente <b>AgencyAnalytics</b><br/>
-          <span className="upd" title="Este tablero se actualiza a pedido, no en tiempo real">● Última actualización: 9-sep-2026</span> · <span className="live">{filtered.length} de {DATA.length} cuentas en vista</span>
+          Ventana <b>Este año 2026</b> · 1-ene a 21-oct · Fuente <b>AgencyAnalytics</b><br/>
+          <span className="upd" title="Este tablero se actualiza a pedido, no en tiempo real">● Última actualización: 22-oct-2026</span> · <span className="live">{filtered.length} de {DATA.length} cuentas en vista</span>
         </div>
       </div>
       <div className="mh-head">
@@ -475,10 +478,10 @@ function App(){
     </div>
 
     <div className="statbar">
-      <div className="stat"><div className="l">Seguidores totales</div><div className="n">{fmt(totFol)}</div><div className="s">en la selección</div></div>
-      <div className="stat"><div className="l">Crecimiento neto</div><div className={'n '+(totGrowth>=0?'pos':'negc')}>{fmtSign(totGrowth)}</div><div className="s">FB · LinkedIn · YT · TikTok</div></div>
+      <div className="stat"><div className="l">Seguidores totales</div><div className="n">{fmt(totFol)}</div><div className="s">en la selección · sin YouTube</div></div>
+      <div className="stat"><div className="l">Crecimiento neto</div><div className={'n '+(totGrowth>=0?'pos':'negc')}>{fmtSign(totGrowth)}</div><div className="s">5 redes · ventanas por red en la nota</div></div>
       <div className="stat"><div className="l">Cuentas</div><div className="n">{filtered.length}</div><div className="s">orgánicas activas</div></div>
-      <div className="stat"><div className="l">Alcance / Impresiones</div><div className="n">{fmt(totReach)}</div><div className="s">exposición del periodo</div></div>
+      <div className="stat"><div className="l">Alcance / Impresiones</div><div className="n">{fmt(totReach)}</div><div className="s">acumulado mensual, sin deduplicar</div></div>
       <div className="stat"><div className="l">Ratio alcance ÷ segs.</div><div className="n">{avgRatio.toFixed(1)}×</div><div className="s">eficiencia media</div></div>
     </div>
 
@@ -521,7 +524,7 @@ function App(){
 
     <div className="panel" style={{marginBottom:36}}>
       <div className="sec-h">Eficiencia de alcance</div>
-      <div className="cap">Alcance ÷ seguidores, top 8. Arriba de 5× el contenido viaja más allá de la base de seguidores.</div>
+      <div className="cap">Alcance acumulado ÷ seguidores, top 8 (YouTube excluido: sin total de suscriptores). Arriba de 5× el contenido viaja más allá de la base de seguidores.</div>
       <div style={{marginTop:16}}>
       {effRows.map(d=><div className="bar" key={d.line+d.net}>
         <div className="lab"><span className="pip" style={{background:NET_COLOR[d.net]}}/>{d.handle.length>24?d.handle.slice(0,24)+'…':d.handle}</div>
@@ -533,7 +536,7 @@ function App(){
 
     <div className="panel" style={{marginBottom:36}}>
       <div className="sec-h">Frecuencia de publicación</div>
-      <div className="cap">Contenido publicado por mes (posts + reels, promedio sobre ~6 meses). Intensidad = cadencia. Dato autoritativo del API de AgencyAnalytics. La cadencia es alta en Facebook y en Instagram por igual.</div>
+      <div className="cap">Contenido publicado por mes (posts + reels, promedio sobre 9.7 meses). Intensidad = cadencia. Dato autoritativo del API de AgencyAnalytics. Ojo: el promedio anual oculta el desplome desde agosto en 4 de 5 líneas; ver la gráfica mensual.</div>
       {freqLines.length===0||freqNets.length===0?<div className="empty">Sin redes medidas para esta combinación.</div>:
       <div style={{marginTop:14,overflowX:'auto'}}>
       <table className="fmx">
@@ -558,7 +561,7 @@ function App(){
       <div className="toolbar">
         <div>
           <div className="sec-h">Volumen de publicaciones por mes</div>
-          <div className="cap">Contenido total publicado cada mes. Instagram desglosado en feed vs reel. (YouTube no disponible por mes; TikTok sin conteo.)</div>
+          <div className="cap">Contenido total publicado cada mes. Instagram desglosado en feed vs reel. (YouTube y TikTok no se grafican por mes.) Oct* = mes parcial, 21 días.</div>
         </div>
         <div className="seg" role="group" aria-label="Apilar volumen">
           <button className={stackBy==='red'?'on':''} onClick={()=>setStackBy('red')}>Por red</button>
@@ -586,7 +589,7 @@ function App(){
 
     <div className="panel" style={{marginBottom:36}}>
       <div className="sec-h">Top contenido por desempeño <span className="tag" style={{color:'var(--c-lij)'}}>· SOLO INSTAGRAM</span></div>
-      <div className="cap"><b>Solo Instagram</b> (reels/posts, ene–jun 2026): las 5 publicaciones de mayor alcance de cada línea. Elige una línea. “G+C” = guardados + compartidos (señal de intención). No incluye Facebook, LinkedIn ni YouTube.</div>
+      <div className="cap"><b>Solo Instagram</b> (reels/posts, 1-ene a 21-oct 2026): las 5 publicaciones con más vistas de cada línea. Elige una línea. “G+C” = guardados + compartidos (señal de intención). No incluye Facebook, LinkedIn ni YouTube.</div>
       <div className="tc-toggle">
         {LINES.map(l=><button key={l} className={'chip'+(topLine===l?' on':'')} onClick={()=>setTopLine(l)} style={{'--dot':LINE_COLOR[l]}}><span className="pip"/>{l}</button>)}
       </div>
@@ -659,9 +662,9 @@ function App(){
             <td className="num">{fmt(d.followers)}</td>
             <td className="num" style={{color:d.growth==null?'var(--faint)':d.growth>=0?'var(--green)':'var(--neg)'}}>{d.growth==null?'n/d':fmtSign(d.growth)}</td>
             <td className="num">{fmt(d.reach)}</td>
-            <td className="num">{(d.reach/d.followers).toFixed(1)}×</td>
+            <td className="num">{d.followers?(d.reach/d.followers).toFixed(1)+'×':'n/d'}</td>
             <td className="num" style={d.posts==null?{color:'var(--faint)'}:null}>{d.posts==null?'n/d':perMonth(d.posts).toFixed(1)}</td>
-            <td className="num" style={d.eng==null?{color:'var(--faint)'}:null}>{d.eng==null?'n/d':(d.eng/d.reach*100).toFixed(1)+'%'}</td>
+            <td className="num" style={d.eng==null?{color:'var(--faint)'}:null}>{d.eng==null?'n/d':(d.eng/d.views*100).toFixed(1)+'%'}</td>
             <td>{signal(d.growth)}</td>
           </tr>)}
         </tbody>
@@ -670,7 +673,7 @@ function App(){
 {(()=>{const gaRows=GA4.filter(g=>lines.length===0||lines.includes(g.line)); if(!gaRows.length)return null; return (
     <div className="panel" style={{marginBottom:36}}>
       <div className="sec-h">¿La red social lleva tráfico a la web?</div>
-      <div className="cap">Sesiones del sitio por canal (GA4, ene–3 jul 2026). Solo líneas con GA4 conectado: Grupo SM, Dayton, Fundación.</div>
+      <div className="cap">Sesiones del sitio por canal (GA4, 1-ene a 21-oct 2026; tráfico del canal Organic Social). Solo líneas con GA4 conectado: Grupo SM, Dayton, Fundación.</div>
       <div className="ga">
         {gaRows.map(g=>{const pct=g.social/g.total*100;return <div className="gacard" key={g.line}>
           <div className="gl">{g.line}</div>
@@ -680,13 +683,12 @@ function App(){
           <div className="grow" style={{marginTop:8}}><span>Social = {pct.toFixed(1)}% del tráfico</span><span className="gbad">{g.bounce}% rebote · {g.dur}s</span></div>
         </div>;})}
       </div>
-      <div className="tc-insight" style={{marginTop:18}}><b>El alcance social NO se convierte en tráfico web.</b> Aun la cuenta de mayor alcance (Fundación, 535K vistas) manda ~0 sesiones al sitio. El tráfico viene de búsqueda y directo. Además, GA4 no tiene <b>conversiones configuradas</b> (0 en todas) → hoy no se puede medir el ROI de social a negocio. Dos arreglos: enlaces/CTA de social hacia la web, y configurar eventos de conversión.</div>
+      <div className="tc-insight" style={{marginTop:18}}><b>El alcance social casi no se convierte en tráfico web.</b> En Grupo SM y Dayton, Organic Social aporta 1.8% y 1.2% de las sesiones; el tráfico viene de búsqueda orgánica y directo. El dato de Fundación (368 sesiones en el año, 0 de búsqueda orgánica) apunta a una <b>etiqueta de GA4 mal instalada o a una propiedad que mide otro sitio</b>: verificar antes de concluir. GA4 registra <b>0 conversiones</b> en Grupo SM y Dayton → hoy el ROI de social a negocio es inmedible. Dos arreglos: CTA con UTM desde social hacia la web, y eventos de conversión en GA4.</div>
     </div>);})()}
 
     <div className="note">
       <span className="lead">Cómo leer estos números</span>
-      Datos del <b>API de AgencyAnalytics</b> (MCP), ventana “Este año” (1-ene a 9-sep-2026), idéntica para todas las cuentas. El histórico de la herramienta arranca en feb/mar 2026, así que <b>no hay 12 meses reales de tendencia</b>. <b>Contenido/mes</b> = posts + reels ÷ 8, cifra autoritativa por API (corrige el conteo previo por scroll, que subcontaba Instagram). El <b>crecimiento neto de Instagram sí está disponible</b> por API e incluido. TikTok aún sin conteo de contenido (LinkedIn ya incluido). <b>Eng-rate</b> = interacciones ÷ alcance/impresiones del periodo (YouTube n/d: su engagement no sale del API de métricas). El <b>diagnóstico cualitativo</b> combina las 5 redes (crecimiento, contenido y cobertura por red) con la identidad observada en los perfiles vivos; los tiempos de respuesta a comentarios no se auditaron (muro de login). <b>Actualización:</b> este tablero se refresca a pedido (no en tiempo real); para no exponer credenciales de API en un sitio público, los datos se vuelven a extraer y publicar manualmente. Pendiente: benchmark vs. competencia.
-    </div>
+      Datos del <b>API de AgencyAnalytics</b> (MCP), ventana 1-ene a 21-oct-2026 (extraídos el 22-oct), idéntica para todas las cuentas y todos los módulos. El histórico arranca en feb/mar 2026: el crecimiento neto de Instagram en LIJ, Dayton, Escuela Católica y Fundación cubre abr–oct, y el de TikTok solo ago–oct. <b>Alcance</b> = suma de alcances mensuales (no deduplica personas; LinkedIn usa impresiones; YouTube y TikTok, vistas). <b>Contenido/mes</b> = posts + reels ÷ 9.66 meses. <b>Eng-rate</b> = interacciones ÷ vistas de contenido (IG: views; FB: vistas de publicaciones; LinkedIn: impresiones; TikTok: vistas). Esta definición sustituye la anterior (interacciones ÷ alcance), que producía tasas imposibles en Instagram (hasta 47%) por mezclar interacciones totales con alcance único; las cifras no son comparables con versiones previas del tablero. YouTube: sin total de suscriptores ni engagement por API (n/d). El <b>diagnóstico cualitativo</b> combina las 5 redes con la identidad observada en los perfiles; el semáforo es el de la auditoría original y los tiempos de respuesta a comentarios no se auditaron. <b>Actualización:</b> manual, a pedido. Pendientes: benchmark vs. competencia, verificación de GA4 de Fundación, causa del desplome de publicación desde agosto.</div>
 
     {tip&&<div className="vtip" style={{left:Math.min(tip.x+14,window.innerWidth-250),top:tip.y+14}}>
       <div className="vtl"><i style={{background:tip.color}}/>{tip.label}</div>
